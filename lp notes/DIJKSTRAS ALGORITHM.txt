@@ -1,0 +1,24 @@
+
+
+Dijkstra's  Algorithm
+
+
+
+Apologies for the confusion earlier. Now, let's dive into Dijkstra's Algorithm, which is used to find the shortest path between a source node and all other nodes in a graph with non-negative edge weights.
+
+Here's a step-by-step explanation of Dijkstra's Algorithm
+
+1. Start by initializing the graph, including the nodes and their respective edges with weights. Also, choose a source node from which to find the shortest paths.
+2. Create a set to keep track of visited nodes and an array (or dictionary) to store the tentative shortest distance from the source node to each node in the graph. Initially, set the tentative distance of the source node to 0 and the distances of all other nodes to infinity.
+3. While there are unvisited nodes
+   a. Choose the node with the smallest tentative distance as the current node and mark it as visited.
+   b. For each of the current node's unvisited neighbors, calculate the tentative distance by adding the weight of the current node's edge to that neighbor's tentative distance.
+   c. If the calculated tentative distance is smaller than the current tentative distance of the neighbor, update the neighbor's tentative distance.
+4. Repeat step 3 until all nodes have been visited or the destination node (if specified) has been visited.
+5. Once the algorithm has visited all the nodes or reached the destination node, the shortest path to each node from the source node can be obtained by backtracking from the destination node using the updated tentative distances.
+
+Dijkstra's Algorithm ensures that the shortest distance to each visited node is correctly calculated by iteratively selecting the node with the smallest tentative distance. By gradually updating the tentative distances, it finds the optimal paths from the source node to all other nodes.
+
+It's important to note that Dijkstra's Algorithm assumes non-negative edge weights and guarantees the shortest path only when all edge weights are non-negative. If negative edge weights exist, an alternative algorithm like the Bellman-Ford algorithm should be used.
+
+Dijkstra's Algorithm is widely used in various applications, such as route planning, network routing, and GPS navigation systems, where finding the shortest path is essential.

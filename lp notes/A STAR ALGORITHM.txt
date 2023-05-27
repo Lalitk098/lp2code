@@ -1,0 +1,22 @@
+A STAR ALGORITHM
+
+The A* (pronounced "A-star") algorithm is a popular pathfinding algorithm used in computer science and artificial intelligence to find the shortest path between two points in a graph or grid. It is commonly used in games, robotics, and navigation systems.
+
+Here's a simplified explanation of how the A* algorithm works:
+
+1. The algorithm takes a graph or grid where each node represents a location or state. It needs to know the starting node and the goal node.
+2. It maintains two sets of nodes: open set and closed set. The open set contains nodes that are yet to be explored, and the closed set contains nodes that have already been visited.
+3. It starts by adding the starting node to the open set and assigns a tentative cost (usually denoted as g) to reach that node from the starting node. The cost can be the distance traveled or any other measure depending on the problem.
+4. While the open set is not empty, the algorithm selects the node with the lowest tentative cost (g) and considers it as the current node.
+5. If the current node is the goal node, the algorithm has found the shortest path and can reconstruct it by following the parent pointers from the goal node back to the starting node.
+6. If the current node is not the goal node, the algorithm expands it by examining its neighboring nodes (adjacent nodes in the graph or grid).
+7. For each neighboring node, the algorithm calculates two values:
+   - The tentative cost (g) to reach that node from the current node, considering the cost of the current path and the cost of moving from the current node to the neighboring node.
+   - The heuristic estimate (h) of the remaining cost from the neighboring node to the goal node. This estimate is problem-dependent and can be calculated using techniques like the Manhattan distance or Euclidean distance.
+8. The algorithm updates the cost and heuristic estimates of each neighboring node and adds them to the open set if they are not already in the closed set.
+9. Once all neighboring nodes have been processed, the algorithm moves the current node from the open set to the closed set, indicating that it has been visited.
+10. The algorithm repeats steps 4 to 9 until it reaches the goal node or exhausts all possible paths.
+
+By considering both the cost to reach a node from the starting node (g) and the estimated remaining cost to reach the goal node (h), the A* algorithm intelligently explores the most promising paths first, leading to efficient and optimal solutions.
+
+It's worth noting that the A* algorithm relies on having a consistent and admissible heuristic (h) to guarantee finding the shortest path.

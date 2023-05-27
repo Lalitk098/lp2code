@@ -1,0 +1,32 @@
+SELECTION SORT
+
+
+
+Certainly! Selection Sort is a simple sorting algorithm that works by dividing the input into two parts: the sorted part and the unsorted part. The algorithm repeatedly selects the smallest (or largest) element from the unsorted part and moves it to the sorted part.
+
+Here's a step-by-step explanation of how Selection Sort works:
+
+1. Imagine you have an unsorted list of numbers.
+2. The algorithm starts by considering the entire list as the unsorted part.
+3. It then searches for the smallest (or largest) element in the unsorted part.
+4. Once the smallest (or largest) element is found, it swaps it with the first element of the unsorted part. This effectively moves the selected element to the sorted part.
+5. Now, the algorithm considers the remaining portion of the list (excluding the element that has just been sorted) as the new unsorted part.
+6. Steps 3 to 5 are repeated for the new unsorted part until the entire list becomes sorted.
+
+To illustrate this with an example, let's say we have the following unsorted list of numbers: [7, 3, 1, 5, 9, 2].
+
+1. The smallest element in the unsorted part is 1. It is swapped with the first element, resulting in: [1, 3, 7, 5, 9, 2].
+2. The new unsorted part is [3, 7, 5, 9, 2].
+3. The smallest element in the new unsorted part is 2. It is swapped with the second element, resulting in: [1, 2, 7, 5, 9, 3].
+4. The new unsorted part is [7, 5, 9, 3].
+5. The smallest element in the new unsorted part is 3. It is swapped with the third element, resulting in: [1, 2, 3, 5, 9, 7].
+6. The new unsorted part is [5, 9, 7].
+7. The smallest element in the new unsorted part is 5. It is swapped with the fourth element, resulting in: [1, 2, 3, 5, 9, 7].
+8. The new unsorted part is [9, 7].
+9. The smallest element in the new unsorted part is 7. It is swapped with the fifth element, resulting in: [1, 2, 3, 5, 7, 9].
+10. The new unsorted part is [9].
+11. Since there's only one element left in the unsorted part, the algorithm stops.
+
+The final sorted list is [1, 2, 3, 5, 7, 9].
+
+Selection Sort is not the most efficient sorting algorithm, especially for large lists, as its time complexity is O(n^2). However, it is simple to understand and implement, making it useful for small lists or as a basic educational example of sorting algorithms.

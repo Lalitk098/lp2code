@@ -1,0 +1,23 @@
+DES algorithm.
+
+
+
+
+
+Sure! DES stands for Data Encryption Standard, and it is a widely used symmetric encryption algorithm. The goal of DES is to take a piece of data, such as a message or a file, and transform it into an unreadable form called ciphertext. This transformation is achieved using a secret key that both the sender and the receiver of the data possess.
+
+Here's a simplified explanation of how DES works:
+
+1. Key Generation: A 64-bit secret key is chosen by the user. However, only 56 bits are used directly in the algorithm, while the remaining 8 bits are used for error checking and are discarded. The key undergoes a permutation process to generate a set of 16 round keys, each consisting of 48 bits.
+
+2. Initial Permutation: The input data, which is also 64 bits in size, goes through an initial permutation process. This rearranges the bits according to a predefined table.
+
+3. Feistel Network: DES employs a Feistel network structure. The 64-bit input is divided into two halves, each 32 bits in size: the left half (L0) and the right half (R0). A total of 16 rounds are performed on these halves alternately.
+
+4. Round Function: In each round, the right half of the data (Ri-1) is expanded from 32 to 48 bits using another predefined table. This expanded data is then XORed with the current round key (Ki). The result undergoes a substitution process using a set of predefined substitution tables, known as S-boxes. These S-boxes replace specific bit patterns with different bit patterns according to their entries. After the substitution, the result is permutated using another predefined table.
+
+5. Swap and Final Permutation: After completing all 16 rounds, the left half (Li-1) and the right half (Ri-1) are swapped. The final output undergoes a final permutation using a predefined table, resulting in the ciphertext.
+
+To decrypt the ciphertext, the same algorithm is applied, but the round keys are used in reverse order.
+
+It's important to note that DES has become less popular in recent years due to its key size being vulnerable to brute-force attacks. Advanced encryption algorithms with larger key sizes, such as AES (Advanced Encryption Standard), are now commonly used.

@@ -1,0 +1,28 @@
+ AES Algorithm.
+
+
+Certainly! AES stands for Advanced Encryption Standard, and it is a widely used symmetric encryption algorithm. AES is considered more secure than its predecessor, DES, and it is commonly used to protect sensitive data in various applications.
+
+Here's a simplified explanation of how AES works:
+
+1. Key Expansion: The user selects a secret key of either 128, 192, or 256 bits in length. The key expansion process generates a set of round keys from the initial key. These round keys are used in each round of the encryption and decryption process.
+
+2. Initial Round: The input data, called the plaintext, is divided into blocks of 128 bits. If the plaintext is not a multiple of 128 bits, padding is applied to make it fit. Each block undergoes an initial round of transformations.
+
+3. Rounds: AES operates with a fixed number of rounds, which depends on the key size. For AES-128, there are 10 rounds; for AES-192, there are 12 rounds; and for AES-256, there are 14 rounds. In each round, a series of transformations is applied to the data block.
+
+   a. SubBytes: Each byte of the block is replaced with a corresponding byte from a substitution box (S-box). The S-box is a predefined lookup table that provides a nonlinear substitution.
+
+   b. ShiftRows: The bytes in each row of the block are shifted cyclically. The first row remains unchanged, the second row is shifted by one position to the left, the third row is shifted by two positions to the left, and the fourth row is shifted by three positions to the left.
+
+   c. MixColumns: Each column of the block is mixed using a mathematical operation. This step provides diffusion and helps in achieving a higher level of security.
+
+   d. AddRoundKey: The block is XORed with the current round key, which is derived from the initial key during the key expansion phase.
+
+4. Final Round: The final round is similar to the other rounds, but it does not include the MixColumns transformation.
+
+5. Output: After completing all the rounds, the resulting block is the ciphertext.
+
+To decrypt the ciphertext, the same algorithm is applied, but the steps are performed in reverse order using the round keys in reverse.
+
+AES is widely used in various applications due to its security and efficiency. It has become the standard encryption algorithm for many purposes, including securing communications, protecting sensitive data, and ensuring the integrity of information.

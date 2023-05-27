@@ -1,0 +1,53 @@
+
+
+Kruskal's algorithm
+
+
+Kruskal's algorithm is a popular algorithm used to find a minimum spanning tree (MST) in a connected, weighted graph. It was named after Joseph Kruskal, an American mathematician, who first described it in 1956.
+
+Here are the steps involved in Kruskal's algorithm:
+
+Start with the given graph, which consists of a set of vertices and edges connecting those vertices. Sort all the edges in non-decreasing order based on their weights.
+
+Create an empty set called the MST, which will store the final minimum spanning tree.
+
+Iterate through the sorted edges in the increasing order of their weights.
+
+For each edge, check if including it in the MST would create a cycle or not. A cycle is formed when two vertices of an edge are already connected in the MST. If adding the edge does not create a cycle, include it in the MST.
+
+Repeat step 4 until there are V-1 edges in the MST, where V is the number of vertices in the graph. This ensures that the MST spans all the vertices of the graph.
+
+Once you have V-1 edges in the MST, you have found the minimum spanning tree.
+
+Kruskal's algorithm follows the greedy approach, where at each step, it chooses the edge with the smallest weight that does not create a cycle in the MST.
+
+The time complexity of Kruskal's algorithm is O(E log E), where E is the number of edges in the graph. Sorting the edges takes O(E log E) time, and for each edge, the algorithm performs a find and union operation on disjoint sets, which has a time complexity of O(log V) using efficient data structures like disjoint-set union (DSU).
+
+
+
+
+
+User
+can you explain me following algorithm in simple terms
+ChatGPT
+Certainly! I'll explain Kruskal's algorithm in simpler terms.
+
+Imagine you have a map with a bunch of cities, and each city is connected to other cities by roads. Each road has a distance or cost associated with it. The goal of Kruskal's algorithm is to find the minimum cost way to connect all the cities with roads, creating a spanning tree.
+
+Here's how the algorithm works:
+
+First, you sort all the roads based on their distances from the shortest to the longest.
+
+Then, you start with an empty set that will eventually become the minimum spanning tree.
+
+Next, you go through the sorted list of roads one by one, starting from the shortest. For each road, you check if adding it to the set will create a loop or a cycle. A cycle occurs when you have a closed loop of roads that connects back to a city you have already visited.
+
+If adding the road to the set doesn't create a cycle, you include it in the minimum spanning tree. This road becomes part of the network that connects all the cities.
+
+Repeat step 4 for each road, always adding the shortest road that doesn't create a cycle until you have connected all the cities.
+
+Once you have connected all the cities with roads, you have found the minimum spanning tree.
+
+Kruskal's algorithm is greedy because it chooses the shortest road at each step that doesn't create a cycle. By continually adding the shortest roads, it gradually builds the minimum spanning tree.
+
+So, in simple terms, Kruskal's algorithm finds the cheapest way to connect all the cities by roads without creating loops, and it does this by starting with the shortest roads and adding them one by one until all the cities are connected.

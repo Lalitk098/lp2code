@@ -1,0 +1,72 @@
+BREADTH FIRST SEARCH
+
+
+The Breadth-First Search (BFS) algorithm is a fundamental graph traversal algorithm used to explore or search a graph or tree structure. It starts at a given node (often called the "source" or "root" node) and systematically explores all the immediate neighbors before moving on to the next level of neighbors.
+
+Here's a simplified explanation of how the BFS algorithm works:
+
+1. The algorithm starts by selecting a source node from which to begin the exploration.
+2. It maintains a queue (FIFO - First-In-First-Out) data structure to keep track of the nodes to be visited.
+3. The source node is added to the queue.
+4. While the queue is not empty, the algorithm follows these steps:
+   - Dequeue (remove) the first node from the queue and mark it as visited.
+   - Process the node. This could involve performing some operations or storing the node's information for later use.
+   - Enqueue (add) all the unvisited neighbors of the current node into the queue.
+5. Repeat steps 4 until the queue becomes empty.
+
+By following this approach, the BFS algorithm explores nodes in a breadth-first manner, meaning it visits all the nodes at the same level before moving to the next level. This ensures that the algorithm visits nodes in a systematic order, moving outwards from the source node.
+
+BFS is often used to solve various graph-related problems, such as finding the shortest path between two nodes, determining connectivity, or exploring all reachable nodes from a given source.
+
+To illustrate BFS with an example, let's consider a simple undirected graph:
+
+```
+       A
+      / \
+     B   C
+    / \   \
+   D   E---F
+```
+
+Starting from node A as the source, the BFS algorithm would visit the nodes in the following order: A, B, C, D, E, F. It explores all the immediate neighbors of each node before moving on to the next level.
+
+BFS is an efficient algorithm for exploring graphs, and its time complexity is typically O(V + E), where V represents the number of vertices (nodes) in the graph, and E represents the number of edges.
+
+
+
+
+
+DEPTH FIRST SEARCH
+
+
+
+The Depth-First Search (DFS) algorithm is a graph traversal algorithm that explores as far as possible along each branch or path before backtracking. It traverses a graph or tree structure by going as deep as possible and only backtracking when necessary.
+
+Here's a simplified explanation of how the DFS algorithm works:
+
+1. The algorithm starts by selecting a source node from which to begin the exploration.
+2. It maintains a stack (LIFO - Last-In-First-Out) data structure to keep track of the nodes to be visited.
+3. The source node is pushed onto the stack.
+4. While the stack is not empty, the algorithm follows these steps:
+   - Pop the top node from the stack and mark it as visited.
+   - Process the node. This could involve performing some operations or storing the node's information for later use.
+   - Push all the unvisited neighbors of the current node onto the stack.
+5. Repeat steps 4 until the stack becomes empty.
+
+By following this approach, the DFS algorithm explores nodes in a depth-first manner, meaning it traverses as far as possible along each branch before backtracking.
+
+DFS is often used to solve various graph-related problems, such as finding connected components, detecting cycles, or exploring all reachable nodes from a given source.
+
+To illustrate DFS with an example, let's consider a simple undirected graph:
+
+```
+       A
+      / \
+     B   C
+    / \   \
+   D   E---F
+```
+
+Starting from node A as the source, the DFS algorithm would visit the nodes in the following order: A, B, D, E, F, C. It explores the neighbors of each node as deeply as possible before backtracking.
+
+DFS is a powerful algorithm, particularly for solving problems involving graph connectivity and traversal. Its time complexity is typically O(V + E), where V represents the number of vertices (nodes) in the graph, and E represents the number of edges.
